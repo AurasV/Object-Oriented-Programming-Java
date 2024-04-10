@@ -1,2 +1,2 @@
-# Object-Oriented-Programming-Java
-My Object Oriented Programming Labs and Homeworks in Java
+# Object Oriented Programming -> Java
+My Object Oriented Programming Laboratories, Homeworks, Tests and Exam in Java
