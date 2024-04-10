@@ -1,0 +1,56 @@
+Implementation of compareTo
+
+ 
+
+public int compareTo( Object aThat ) {
+
+    final int BEFORE = -1;
+    final int EQUAL = 0;
+    final int AFTER = 1;
+ 
+    //this optimization is usually worthwhile, and can
+    //always be added
+    if ( this == aThat ) return EQUAL;
+    //primitive numbers follow this form
+    if (this.attribute< aThat.attribute) return BEFORE;
+    if (this. attribute > aThat.attribute) return AFTER;
+    
+//What if we use more attributes for comparison???
+
+return EQUAL;
+
+//references follow this form
+
+return (this.attribute.compareTo(aThat.attribute);
+
+}
+
+
+Continue problems from last time. Implement Comparable for Account, compare Accounts based on their IBAN.
+ DO NOT CREATE ANOTHER INTERFACE, implement the existing interface from java.lang
+
+class Account implements Comparable{
+
+public int compareTo(Object aThat)
+
+......
+
+}
+
+Create a new interface, Storable with a method “store(String file)” which writes in a file the attributes of the implementing object.
+ (reuse toString() !).
+Hint
+
+Reading and writing from a text file
+
+FileOutputStream outputFile=new FileOutputStream("info.txt");
+
+OutputStreamWriter outputStream=new OutputStreamWriter(outputFile);
+
+PrintWriter pw=new PrintWriter(outputStream);       
+
+FileInputStream inputFile=new FileInputStream("info.txt");
+
+InputStreamReader reader=new InputStreamReader(inputFile);
+
+BufferedReader br=new BufferedReader(reader);

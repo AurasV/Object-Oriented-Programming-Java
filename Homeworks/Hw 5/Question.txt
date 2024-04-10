@@ -1,0 +1,22 @@
+
+Problem 3 (optional, for homework)
+
+
+Create the classes TouristicPackage and Attraction. A package has a name, id and price and also a list of attractions.
+ An attraction has a name and location.
+
+Create 10 different packages each one with 2-3 attractions. (make sure that some attractions repeat in more packages).
+ Add the packages to a List<TouristicPackage>. This list represents the list of sold packages.
+
+We are interested in determining which are the most popular attractions.
+ For that we create a Map<Attraction,Integer> which stores how many times each attraction was bought.
+ We populate this Map by parsing the List created earlier. Check the results.
+ ( Attractions should be unique in order to be used as keys for the map, what does this imply? )
+
+It is not enough to know just the number of times an attraction was bought because it depends on the total number of sales.
+ We want to know the relative popularity of an attraction.
+ For example if 5 touristic packages, each with 2 attractions, were bought and "Paltinis" as an attraction appeared 2 times
+ it means that it has a relative popularity of 2/10. Create a Map<Attraction,Double>
+  which stores the relative popularity of each attraction. Populate this Map by parsing the Map created earlier. Check the results.
+
+Print for each attraction how many times it was bought and its relative popularity.

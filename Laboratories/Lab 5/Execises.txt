@@ -1,0 +1,46 @@
+1) Create an Employee class with the fields name, CNP, hiringDate, specialization, salary.
+ Create 10 Employee instances. Add them to an ArrayList. Use an Iterator to parse and display the list.
+ Use a ListIterator to parse the list backwards and add an element at the middle of the list.
+
+2)Make sure some employees have all the fields identical. Add all the employees to a HashSet. You can use the constructor
+
+Set<Employee> empSet=new HashSet<>(empList); // Accepts a collection
+
+Use an Iterator to parse the set. Did the duplicates disapear? In what order was the set parsed?
+
+
+3) The duplicates did not disappear because a HashSet is implemented as a hash table,
+ meaning that we first compute the hash of the object so that we send it to the correct bucket.
+ By default hashCode method in Object ( which is called to compute the hash) will compute the hash
+ based on the address and not the values of the fields. Reimplement hashCode in Employee so that it
+ depends only on the values of the fields. Now identical objects are sent to the same bucket.
+
+
+4)The duplicates still did not disappear because even if the objects are in the same bucket,
+ they must be compared using equals to test for equality. Again by default equals depends on
+ the address so override equals so that it depends on the same fields as hashCode.
+
+
+RULE : Whenever you modify hashCode you must also modify equals in the same way.
+ Whenever you modify equals you must also modify hashCode in the same way. 
+
+Remember:
+
+o.equals(o) = true
+
+o.equals(null) = false
+
+o1.equals(o2) = o2.equals(o1)
+
+o1.equals(o2) = true and o2.equals(o3)= true => o1.equals(o3) = true
+
+
+5) Add all the employees to a TreeSet and use a for each loop to parse and display the set.
+ What happens? What must be implemented?
+
+
+Problem 2
+
+Create a class Employee with name and other attributes. Populate an ArrayList with 10 Employees.
+ From the list populate a map<name, employee>. Use Scanner to get a name from the keyboard and show the
+ corresponding employee if it exists.

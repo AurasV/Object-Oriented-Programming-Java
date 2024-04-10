@@ -1,0 +1,60 @@
+Copy the templates and the tests from the lab4 sources folder. 
+Write your solution in the template files and then run the tests to see if the solution is correct. 
+You can add more tests.
+
+1) Implement the generic method sort
+
+public static <T extends Comparable<T>> void sort (T[] arr) {
+...}
+
+which sorts the given array arr.
+
+Hint: write first a simple sorting algorithm such as bubble sort for integers and then adapt it for generics.
+
+2)  Implement a binary search tree for integers. The tree should have the methods add(int val) and inOrder().
+ The in-order traversal consists of first visiting the left sub-tree, then the root node, and finally the right sub-tree.
+ The result of calling the method is printing in the System.out the elements of the tree, sorted.
+
+
+class BinaryTree {
+Node root;
+public void add(int val) {...}
+public void inOrder() {...} 
+
+Now make it generic. 
+
+class BinaryTree<T extends Comparable<T>> {
+
+Node<T> root;
+public void add(T val) {...}
+public void inOrder() {...} 
+
+
+3)  Implement a generic singly linked list with methods 
+
+void add(T val)  - adds val at the end of list
+void add(T val, int index) - adds val at index 
+T remove() - remove first element
+T remove(int index) - remove element at index
+
+T get(int index) - returns element at index
+
+
+
+
+As in previous exercise use a generic Node class for the nodes of the list:
+
+class Node<T> {
+
+Node<T> next;
+
+T val;
+
+}
+
+
+Write missing tests for the MyLinkedListTest class
+
+
+Reference:
+https://en.wikipedia.org/wiki/Linked_list

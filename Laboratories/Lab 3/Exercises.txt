@@ -1,0 +1,39 @@
+1) Implement class Card containing : enumeration Rank (Ace, 2,3,4,5,6,7,8,9,10, Knight, Queen, King) 
+and enumeration Suit (Clubs, Diamonds, Hearts, and spades). Implement class  Hand which has an array of cards. 
+Hand has methods addCard(Card c), deleteCard(Rank, Suit), sort(), display(). Cards are sorted first by suit and then by rank. 
+If 2 cards are equal raise custom exceptions. Make Hand implement Storable (see below). Card should be immutable
+
+ 
+
+ 
+
+2)  Implement class Course containing: String name, enumeration Type (Foundamental, Specialization, Discipline), 
+enumeration Stream (English, French, German), int creditPoints. Class Contract has an array of courses with methods 
+addCourse(Course), deleteCourse(type, stream, name) sort(), display(). Courses are sorted by stream, type, name. 
+If 2 courses are equal raise a custom exception in method sort().Make Contract implement Storable (see below). 
+Course should be immutable
+
+ 
+
+ 
+
+Reading and writing from a text file
+
+FileOutputStream outputFile=new FileOutputStream("info.txt");
+
+OutputStreamWriter outputStream=new OutputStreamWriter(outputFile);
+
+PrintWriter pw=new PrintWriter(outputStream);       
+
+FileInputStream inputFile=new FileInputStream("info.txt");
+
+InputStreamReader reader=new InputStreamReader(inputFile);
+
+BufferedReader br=new BufferedReader(reader);
+
+ 
+
+ 
+
+Create a new interface, Storable with a method “store(String file)” which writes in a file the attributes of the implementing object.
+ (reuse toString() !).

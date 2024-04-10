@@ -1,0 +1,1 @@
+[Person{name='Matei', gender='Male', jobDescription='Mortician', experience=5, location='Bucuresti'}, Person{name='Ioana', gender='Female', jobDescription='Writer', experience=0, location='Targoviste'}]
